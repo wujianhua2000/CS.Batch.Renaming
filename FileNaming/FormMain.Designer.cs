@@ -38,11 +38,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point( 408, 208 );
+            this.button2.Location = new System.Drawing.Point( 251, 206 );
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size( 75, 23 );
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "close";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler( this.ButtonExit_Click );
             // 
@@ -50,27 +50,27 @@
             // 
             this.statusStrip1.Location = new System.Drawing.Point( 0, 244 );
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size( 495, 22 );
+            this.statusStrip1.Size = new System.Drawing.Size( 341, 22 );
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // ButtonRuleMaking
             // 
-            this.ButtonRuleMaking.Location = new System.Drawing.Point( 22, 135 );
+            this.ButtonRuleMaking.Location = new System.Drawing.Point( 12, 70 );
             this.ButtonRuleMaking.Name = "ButtonRuleMaking";
             this.ButtonRuleMaking.Size = new System.Drawing.Size( 314, 23 );
             this.ButtonRuleMaking.TabIndex = 4;
-            this.ButtonRuleMaking.Text = "根据文件名称建立新名称";
+            this.ButtonRuleMaking.Text = "make old name and new name";
             this.ButtonRuleMaking.UseVisualStyleBackColor = true;
             this.ButtonRuleMaking.Click += new System.EventHandler( this.ButtonRuleMaking_Click );
             // 
             // ButtonRuleNaming
             // 
-            this.ButtonRuleNaming.Location = new System.Drawing.Point( 22, 164 );
+            this.ButtonRuleNaming.Location = new System.Drawing.Point( 12, 144 );
             this.ButtonRuleNaming.Name = "ButtonRuleNaming";
             this.ButtonRuleNaming.Size = new System.Drawing.Size( 314, 23 );
             this.ButtonRuleNaming.TabIndex = 5;
-            this.ButtonRuleNaming.Text = "根据文件定义修改名称";
+            this.ButtonRuleNaming.Text = "change file name using rule file";
             this.ButtonRuleNaming.UseVisualStyleBackColor = true;
             this.ButtonRuleNaming.Click += new System.EventHandler( this.ButtonRuleNaming_Click );
             // 
@@ -82,13 +82,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF( 6F, 12F );
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size( 495, 266 );
+            this.ClientSize = new System.Drawing.Size( 341, 266 );
             this.Controls.Add( this.ButtonRuleNaming );
             this.Controls.Add( this.ButtonRuleMaking );
             this.Controls.Add( this.statusStrip1 );
             this.Controls.Add( this.button2 );
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Batch rename files";
             this.Load += new System.EventHandler( this.FormMain_Load );
             this.ResumeLayout( false );
             this.PerformLayout( );
