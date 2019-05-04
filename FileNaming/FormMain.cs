@@ -49,6 +49,7 @@ namespace FileNaming
 
             FileInfo fileinfo = new FileInfo( filename );
             string pathname = fileinfo.DirectoryName;
+
             DirectoryInfo rootpath = fileinfo.Directory;
 
             StringBuilder buffer = new StringBuilder( );
@@ -76,11 +77,13 @@ namespace FileNaming
         private void ButtonRuleNaming_Click( object sender, EventArgs e )
         {
             if ( this.DialogFile.ShowDialog( ) != DialogResult.OK ) return;
+
             string filename = this.DialogFile.FileName;
             string[] datalines = File.ReadAllLines( filename, Encoding.Default);
 
             FileInfo fileinfo = new FileInfo( filename );
             string pathname = fileinfo.DirectoryName;
+
             DirectoryInfo rootpath = fileinfo.Directory;
 
             foreach ( string line in datalines )
