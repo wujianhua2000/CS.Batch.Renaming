@@ -29,7 +29,7 @@ namespace FileNaming
 
             this.FileName = fileinfo.Name;
 
-            this.Replace( rulines );
+            this.ReplaceUsingRules( rulines );
 
             return;
         }
@@ -39,7 +39,7 @@ namespace FileNaming
         /// 
         /// </summary>
         /// <param name="rulines"></param>
-        private void Replace( string[ ] rulines )
+        private void ReplaceUsingRules( string[ ] rulines )
         {
             this.NewFname = this.FileName;
 
@@ -110,7 +110,7 @@ namespace FileNaming
             if ( tokens.Length < 2 ) return false;
 
             string srcname = tokens[ 0 ].Trim( );
-            string dstname = rootpath.Name + "\\" + tokens[ 1 ].Trim( );
+            string dstname = rootpath.FullName + "\\" + tokens[ 1 ].Trim( );
 
             FileInfo[ ] filelist = rootpath.GetFiles( srcname );
             if ( filelist.Length < 1 ) return false;

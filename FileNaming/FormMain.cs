@@ -42,6 +42,14 @@ namespace FileNaming
         /// <param name="e"></param>
         private void ButtonRuleMaking_Click( object sender, EventArgs e )
         {
+            string message = "请使用 notepad++ 将你的文本文件 Encoding 保存成 ANSI 格式。\n\n" +
+                             "否则，中文的替换可能无法实现。";
+
+            MessageBox.Show( message, 
+                             "注意事项",
+                             MessageBoxButtons.OK,
+                             MessageBoxIcon.Information );
+
             if ( this.DialogFile.ShowDialog( ) != DialogResult.OK ) return;
 
             string filename = this.DialogFile.FileName;
