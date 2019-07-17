@@ -75,7 +75,11 @@ namespace FileNaming
         /// </summary>
         private void LengthenName( int length )
         {
-            string spaces = "".PadLeft( length - this.NameLen );
+            string spaces = string.Empty;
+
+            int delta = length - this.NameLen;
+
+            if ( delta > 0 ) spaces = "".PadLeft( length - this.NameLen );
 
             this.FileName =  this.FileName + spaces;
 
